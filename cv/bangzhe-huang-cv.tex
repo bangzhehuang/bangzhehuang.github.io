@@ -1,0 +1,148 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=1.55cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\setmainfont{Times New Roman}
+
+\definecolor{linkblue}{RGB}{20,75,140}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=linkblue
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\linespread{1.02}
+\setlength{\leftmargini}{1.4em}
+\let\originalitemize\itemize
+\let\endoriginalitemize\enditemize
+\renewenvironment{itemize}
+  {\originalitemize
+   \setlength{\itemsep}{1.8pt}
+   \setlength{\topsep}{2.5pt}
+   \setlength{\parsep}{0pt}
+   \setlength{\partopsep}{0pt}}
+  {\endoriginalitemize}
+
+\newcommand{\cvname}[1]{{\LARGE\bfseries #1}\par}
+\newcommand{\cvsection}[1]{
+  \vspace{0.55em}{\large\bfseries #1}\par
+  \vspace{0.1em}\hrule\vspace{0.35em}
+}
+\newcommand{\entry}[4]{
+  \textbf{#1}\hfill #2\\
+  \textit{#3}\hfill\textit{#4}
+}
+\newcommand{\project}[2]{
+  \textbf{#1}\\[-1pt]
+  \textit{#2}
+}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\cvname{Bangzhe Huang}
+\vspace{0.12em}
+\href{mailto:huangbzphys@gmail.com}{huangbzphys@gmail.com}
+\quad|\quad
+\href{https://github.com/bangzhehuang}{github.com/bangzhehuang}
+\quad|\quad
+\href{https://bangzhehuang.github.io/}{bangzhehuang.github.io}
+
+\vspace{0.4em}
+\textbf{Research interests:} automated research, research world models,
+AI4AI, scientific machine learning, and many-body physics
+
+\cvsection{Education}
+
+\entry
+  {Fudan University, Department of Physics}
+  {Shanghai, China}
+  {B.Sc. in Physics, incoming undergraduate}
+  {September 2026 -- expected June 2030}
+
+\cvsection{Research Experience}
+
+\entry
+  {College of AI, Tsinghua University}
+  {Beijing, China}
+  {Research Intern, Prof. Ziming Liu's group}
+  {Current}
+
+\vspace{0.15em}
+\project
+  {AI4AI: Learning to Design a Meta-model}
+  {Independent research; active pilot}
+
+\begin{itemize}
+  \item Built a controlled AI4AI pilot in which one meta-model predicts
+  training dynamics and a second model learns architecture-dependent test
+  log-MAE to guide the design of the first model.
+  \item Defined an exhaustive DAG search space from four homogeneous MLP blocks
+  and one softmax gate, generated 10,006 canonical candidates, and built a graph
+  encoder for supervised architecture-to-outcome prediction.
+  \item Implemented the candidate-training and meta-model pipelines and an
+  interactive interface for manual DAG construction, outcome prediction, and
+  automatic architecture design. Preliminary experiments surface a
+  ResNet-like design.
+\end{itemize}
+
+\project
+  {Physics-Informed Many-Body Foundation Models: Scalable Optimization across
+  Heterogeneous Tasks}
+  {Project lead; advisor: Prof. Jing Wang, Fudan University; preprint in preparation}
+
+\begin{itemize}
+  \item Proposed a task-modular many-body foundation model that preserves each
+  Hamiltonian family's physical priors and ansatzes while learning
+  high-level representations for cross-task composition.
+  \item Led problem formulation, PyTorch implementation, and experimental
+  evaluation against unified joint-training baselines across task scales,
+  task combinations, and fine-tuning settings.
+  \item Preliminary results show comparable generalization and adaptation when
+  unified training is optimizable, while the modular system remains trainable
+  in regimes where the unified baseline becomes ill-conditioned.
+\end{itemize}
+
+\project
+  {Open-Ended Scientific Research Benchmark for Physics Research Agents}
+  {Independent research; academic discussion with Prof. Siheng Chen, Shanghai Jiao Tong University}
+
+\begin{itemize}
+  \item Designed open-ended physics research tasks with stable ground truth
+  defined by low-dimensional physical structure and equivalent observables,
+  without prescribing a single valid research trajectory.
+  \item Built an end-to-end pilot covering task interpretation, simulation
+  design, code generation and execution, feedback-driven action selection, and
+  final physical auditing.
+\end{itemize}
+
+\project
+  {Phase Transport and Defect Dynamics in Nonreciprocal Spin Systems}
+  {Lead researcher; advisor: Prof. Zi Cai, Shanghai Jiao Tong University}
+
+\begin{itemize}
+  \item Used Monte Carlo simulations to study the microscopic origin of
+  macroscopic oscillations in two-dimensional nonreciprocal spin systems and
+  extracted oscillation frequency, domain-wall density, and defect observables.
+  \item Proposed the effective transport relation
+  $\omega=\rho v_{\mathrm{eff}}$ and identified two dynamical regimes associated
+  with periodic wall expansion and vortex-constrained topological structures.
+  \item Tested the resulting physical picture across lattice structures and
+  symmetric bond disorder.
+\end{itemize}
+
+\cvsection{Technical Skills}
+
+\textbf{Machine learning:} PyTorch, deep learning, scientific foundation
+models, graph neural networks, LLM agents, benchmark design\\
+\textbf{Scientific computing:} Python, Monte Carlo simulation, numerical
+experiments, statistical analysis\\
+\textbf{Physics:} quantum mechanics, statistical physics, many-body physics
+
+\end{document}
