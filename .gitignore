@@ -1,0 +1,5 @@
+.DS_Store
+test-artifacts/
+cv/*.aux
+cv/*.log
+cv/*.out
