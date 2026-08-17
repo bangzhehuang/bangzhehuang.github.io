@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bangzhe Huang</title>
+    <meta
+      name="description"
+      content="Bangzhe Huang works on research world models, automated research, AI4AI, and machine learning for science."
+    >
+    <link rel="canonical" href="https://bangzhehuang.github.io/">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Bangzhe Huang">
+    <meta
+      property="og:description"
+      content="Research world models, automated research, AI4AI, and machine learning for science."
+    >
+    <meta property="og:url" content="https://bangzhehuang.github.io/">
+    <meta
+      property="og:image"
+      content="https://bangzhehuang.github.io/assets/img/ai4ai-demo.png"
+    >
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Roboto+Slab:wght@300;400;500;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Primary navigation">
+        <button
+          class="navbar-toggle"
+          type="button"
+          aria-controls="navbar-menu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          data-nav-toggle
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <ul class="navbar-menu" id="navbar-menu" data-nav-menu>
+          <li><a class="nav-link is-active" href="#about">about</a></li>
+          <li><a class="nav-link" href="#research">research</a></li>
+          <li><a class="nav-link" href="#experience">experience</a></li>
+          <li><a class="nav-link" href="cv/bangzhe-huang-cv.pdf">cv</a></li>
+        </ul>
+      </nav>
+      <progress id="progress" value="0" max="1" aria-label="Page progress"></progress>
+    </header>
+
+    <main class="container page" id="main-content">
+      <section class="about" id="about" aria-labelledby="about-title">
+        <header class="post-header">
+          <h1 class="post-title" id="about-title">
+            <span class="font-weight-bold">Bangzhe</span> Huang
+          </h1>
+        </header>
+
+        <div class="about-copy">
+          <p>
+            I am Bangzhe Huang (黄邦哲), a Research Intern in
+            Prof. Ziming Liu's group at the College of AI, Tsinghua University.
+            I will begin my undergraduate studies in Physics at Fudan University
+            in September 2026.
+          </p>
+          <p>
+            My research has developed from many-body physics and learning across
+            heterogeneous scientific tasks to evaluating open-ended research agents
+            and building controlled AI4AI systems. I am interested in models that
+            learn how research states, actions, and architectures translate into
+            future outcomes, and in using those models to improve scientific
+            discovery. I am open to collaborations on automated research, research
+            world models, AI4AI, and machine learning for science.
+          </p>
+        </div>
+
+        <p class="contact-links" aria-label="Contact and project links">
+          <a href="mailto:huangbzphys@gmail.com">Email</a>
+          <span aria-hidden="true">/</span>
+          <a href="cv/bangzhe-huang-cv.pdf">CV</a>
+          <span aria-hidden="true">/</span>
+          <a href="https://github.com/bangzhehuang">Github</a>
+          <span aria-hidden="true">/</span>
+          <a href="https://bangzhehuang.github.io/AI4AI-demo/">AI4AI Demo</a>
+        </p>
+      </section>
+
+      <section class="research" id="research" aria-labelledby="research-title">
+        <h2 id="research-title">Selected Research</h2>
+        <ol class="research-list">
+          <li>
+            <article class="research-entry">
+              <a
+                class="research-preview"
+                href="https://bangzhehuang.github.io/AI4AI-demo/"
+                aria-label="Open the AI4AI interactive demo"
+              >
+                <img
+                  src="assets/img/ai4ai-demo.png"
+                  alt="AI4AI interface for composing and evaluating a meta-model architecture"
+                >
+              </a>
+              <div class="research-body">
+                <h3>AI4AI: Learning to Design a Meta-model</h3>
+                <p>
+                  Can a learned model predict which architecture will train well,
+                  then use those predictions to design another model? I built a
+                  controlled pilot over a DSL of four MLP blocks and one softmax
+                  gate. Candidate DAGs are trained on fixed regression tasks, while
+                  a graph meta-model predicts test log-MAE and supports manual or
+                  automatic architecture design. Preliminary experiments surface a
+                  ResNet-like design.
+                </p>
+                <p class="research-meta">Independent research · Active pilot</p>
+                <p class="research-links">
+                  <a href="https://bangzhehuang.github.io/AI4AI-demo/">Demo</a>
+                  <span aria-hidden="true">·</span>
+                  <a href="https://github.com/bangzhehuang/AI4AI-demo">Code</a>
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="research-entry">
+              <div class="research-preview" aria-hidden="true">
+                <img
+                  src="assets/img/many-body-architecture.png"
+                  alt=""
+                >
+              </div>
+              <div class="research-body">
+                <h3>
+                  Physics-Informed Many-Body Foundation Models: Scalable
+                  Optimization across Heterogeneous Tasks
+                </h3>
+                <p>
+                  Scaling one monolithic model across heterogeneous Hamiltonian
+                  families can make optimization ill-conditioned. I proposed a
+                  task-modular architecture that preserves family-specific physical
+                  priors and ansatzes while learning high-level representations for
+                  cross-task composition. I lead the problem formulation, method,
+                  PyTorch implementation, and experimental evaluation.
+                </p>
+                <p class="research-meta">
+                  Project lead · Advisor: Prof. Jing Wang, Fudan University ·
+                  Preprint in preparation
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="research-entry research-entry--text-only">
+              <div class="research-body">
+                <h3>Open-Ended Scientific Research Benchmark for Physics Research Agents</h3>
+                <p>
+                  How can open-ended physics research agents be evaluated without
+                  prescribing a single valid trajectory? I designed benchmark tasks
+                  whose ground truth is a low-dimensional physical structure and
+                  equivalent observables, while agents may reach it through
+                  multi-round simulation, observation, and feedback. A pilot tests
+                  the full loop from experimental design and code execution to a
+                  final physical audit.
+                </p>
+                <p class="research-meta">
+                  Independent research · Academic discussion with Prof. Siheng Chen,
+                  Shanghai Jiao Tong University · Pilot completed
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="research-entry">
+              <div class="research-preview" aria-hidden="true">
+                <img
+                  src="assets/img/nonreciprocal-spin.png"
+                  alt=""
+                >
+              </div>
+              <div class="research-body">
+                <h3>
+                  Phase Transport and Defect Dynamics in Nonreciprocal Spin Systems
+                </h3>
+                <p>
+                  Using Monte Carlo simulations of two-dimensional nonreciprocal
+                  spin systems, I study the microscopic origin of macroscopic
+                  oscillation and defect-mediated phase transport. The analysis
+                  relates oscillation frequency to domain-wall density through
+                  <span class="equation-inline">ω = ρv<sub>eff</sub></span> and tests
+                  two transport regimes across lattices and bond disorder.
+                </p>
+                <p class="research-meta">
+                  Lead researcher · Advisor: Prof. Zi Cai, Shanghai Jiao Tong
+                  University
+                </p>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </section>
+
+      <section class="experience" id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title">Experience</h2>
+        <div class="experience-list">
+          <article class="experience-entry">
+            <div>
+              <h3>College of AI, Tsinghua University</h3>
+              <p>Research Intern in Prof. Ziming Liu's group</p>
+            </div>
+            <p class="experience-time">Current</p>
+          </article>
+          <article class="experience-entry">
+            <div>
+              <h3>Department of Physics, Fudan University</h3>
+              <p>Incoming undergraduate in Physics</p>
+            </div>
+            <p class="experience-time">Starting September 2026</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © 2026 Bangzhe Huang ·
+          <a href="mailto:huangbzphys@gmail.com">huangbzphys@gmail.com</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
