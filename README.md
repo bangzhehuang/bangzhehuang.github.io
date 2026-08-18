@@ -25,3 +25,6 @@ The visual structure is adapted from the MIT-licensed
 at commit `4344ac521ddbfbe835ac20a7b43a9cfad5ca1b5b`. All personal copy and
 research assets in this repository belong to Bangzhe Huang or are otherwise
 identified at their source.
+
+Roboto and Roboto Slab are self-hosted from Google Fonts under the Apache 2.0
+license. Their source and license details are recorded in `assets/fonts/`.

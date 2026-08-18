@@ -3,6 +3,7 @@ import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
 
 const htmlPath = new URL("../index.html", import.meta.url);
+const cssPath = new URL("../assets/css/main.css", import.meta.url);
 
 function readHomepage() {
   return readFileSync(htmlPath, "utf8");
@@ -83,4 +84,19 @@ test("the CV link targets a real PDF", () => {
   assert.match(html, /href=["']cv\/bangzhe-huang-cv\.pdf["']/);
   assert.ok(existsSync(cv), "the linked CV PDF must exist");
   assert.equal(readFileSync(cv).subarray(0, 4).toString(), "%PDF");
+});
+
+test("reference fonts are self-hosted and available offline", () => {
+  const html = readHomepage();
+  const css = readFileSync(cssPath, "utf8");
+  const fonts = [
+    "assets/fonts/roboto-latin-variable.woff2",
+    "assets/fonts/roboto-slab-latin-400.woff2",
+  ];
+
+  assert.doesNotMatch(html, /fonts\.(googleapis|gstatic)\.com/);
+  for (const font of fonts) {
+    assert.match(css, new RegExp(font.split("/").at(-1).replace(".", "\\.")));
+    assert.ok(existsSync(new URL(`../${font}`, import.meta.url)), `${font} must exist`);
+  }
 });
