@@ -233,10 +233,10 @@ img {
 .contact-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 5px 8px;
   margin: 23px 0 0;
-  text-align: center;
+  text-align: left;
 }
 
 section > h2 {
