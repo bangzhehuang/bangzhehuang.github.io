@@ -11,7 +11,7 @@ without stretching, cropping, or rearranging the original architecture diagram.
   white 16:9 canvas.
 - Use the added space above the diagram for the title:
   `Scaling Foundation Models for Many-Body Physics`.
-- Place the subtitle directly below it:
+- Place the subtitle directly below it, aligned to the title's left edge:
   `Task-specific physics priors, shared high-level representations`.
 - Use the added space below the diagram for three quiet, evenly spaced labels:
   `Family-specific ansatzes`, `Shared representation`, and

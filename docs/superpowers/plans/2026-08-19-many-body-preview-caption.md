@@ -23,7 +23,7 @@ Expected: `2866 x 1100`; the original component geometry is left unchanged.
 
 - [ ] **Step 2: Composite the approved copy**
 
-Create a `2866 x 1612` pure-white canvas. Draw the centered title and subtitle above the source diagram, paste the cleaned source diagram at native size, and draw the three approved labels in an evenly spaced lower row. Use Helvetica or Arial, black for the title, and neutral gray for secondary copy.
+Create a `2866 x 1612` pure-white canvas. Draw the centered title above the source diagram, align the subtitle to the title's left edge, paste the cleaned source diagram at native size, and draw the three approved labels in an evenly spaced lower row. Use Helvetica or Arial, black for the title, and neutral gray for secondary copy.
 
 - [ ] **Step 3: Inspect the rendered image**
 
