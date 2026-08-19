@@ -35,7 +35,7 @@ physical ground truth.
 
 ## Homepage Integration
 
-- Replace the current `open-ended-benchmark.svg` while preserving its filename
-  and the existing third-project HTML integration.
+- Publish the refined asset as `open-ended-benchmark-method.svg` and update the
+  existing third-project image reference so browsers do not reuse the old visual.
 - Visually inspect both the full figure and its rendered homepage card.
 - No broad browser matrix is required.

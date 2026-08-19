@@ -13,7 +13,8 @@
 ### Task 1: Replace the visual asset
 
 **Files:**
-- Modify: `assets/img/open-ended-benchmark.svg`
+- Create: `assets/img/open-ended-benchmark-method.svg`
+- Remove: `assets/img/open-ended-benchmark.svg`
 
 - [ ] **Step 1: Draw the left task region**
 
@@ -38,12 +39,12 @@ segments, and enough scale to fill the `1600 × 900` viewBox.
 ### Task 2: Verify and publish
 
 **Files:**
-- Verify: `assets/img/open-ended-benchmark.svg`
+- Verify: `assets/img/open-ended-benchmark-method.svg`
 - Verify: `index.html`
 
 - [ ] **Step 1: Validate the SVG**
 
-Run `xmllint --noout assets/img/open-ended-benchmark.svg`; expect no output and
+Run `xmllint --noout assets/img/open-ended-benchmark-method.svg`; expect no output and
 exit status `0`.
 
 - [ ] **Step 2: Inspect both render sizes**
@@ -55,7 +56,7 @@ headings, trajectory structure, and shared-GT endpoint.
 - [ ] **Step 3: Commit and publish**
 
 ```bash
-git add assets/img/open-ended-benchmark.svg
+git add assets/img/open-ended-benchmark.svg assets/img/open-ended-benchmark-method.svg index.html
 git commit -m "Refine open-ended benchmark method figure"
 git push origin main
 ```
