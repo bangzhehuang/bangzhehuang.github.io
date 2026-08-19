@@ -19,11 +19,18 @@ ground truth.
 
 ## Visual System
 
-- Use black and neutral gray for trajectories and intermediate states.
-- Reserve one restrained blue (`#28678F`) for the shared ground truth.
+- Use an expressive scientific palette on white: cobalt blue (`#2855D9`),
+  vermilion (`#E34A3B`), and golden yellow (`#E7A823`) distinguish the three
+  valid research trajectories.
+- Use deep ink (`#171A1F`) for the shared target outline and teal (`#078C7C`)
+  for the physical structure at its core, making convergence the visual focus.
+- Keep intermediate node fills light and use the trajectory colors mainly in
+  strokes and compact glyphs, so the composition stays legible rather than
+  becoming a field of saturated blocks.
 - Use straight segments and folded polylines; do not use decorative curves.
 - Keep strokes and nodes strong enough to survive the homepage thumbnail size.
-- Avoid gradients, shadows, decorative cards, dense text, and colorful accents.
+- Avoid gradients, shadows, decorative cards, dense text, and additional accent
+  colors beyond the defined palette.
 
 ## Homepage Integration
 
