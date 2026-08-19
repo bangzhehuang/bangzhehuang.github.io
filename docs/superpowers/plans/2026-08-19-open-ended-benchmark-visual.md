@@ -2,73 +2,60 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Add a vivid homepage visual showing three valid research trajectories converging on one stable physical ground truth.
+**Goal:** Replace the icon-like benchmark image with a full-canvas academic method figure based on the approved two-region design.
 
-**Architecture:** Create one self-contained 16:9 SVG asset with no runtime dependencies, then add it to the existing third research entry. Reuse the current research-card image treatment and update only that entry's metadata.
+**Architecture:** Keep the existing homepage `<img>` reference and replace only its self-contained SVG asset. The SVG uses native text, dashed method boxes, split state blocks, and orthogonal arrows, so it remains sharp and legible without runtime code.
 
-**Tech Stack:** Static SVG, HTML, existing CSS, Node content tests
+**Tech Stack:** Static SVG, existing HTML/CSS, Quick Look rendering, Playwright screenshot
 
 ---
 
-### Task 1: Create the research-trajectory visual
+### Task 1: Replace the visual asset
 
 **Files:**
-- Create: `assets/img/open-ended-benchmark.svg`
+- Modify: `assets/img/open-ended-benchmark.svg`
 
-- [ ] **Step 1: Draw the SVG asset**
+- [ ] **Step 1: Draw the left task region**
 
-Create a `1600 × 900` white SVG. Use three straight polyline paths in cobalt
-`#2855D9`, vermilion `#E34A3B`, and gold `#E7A823`; place two geometric
-simulation/observation nodes on each path; converge them at a deep-ink junction;
-and connect the junction to a teal lattice target. Use no small text, gradients,
-curves, shadows, or embedded raster assets.
+Use a bordered left region titled `Open-Ended Physics Task`. Add a dashed system
+boundary containing `Physics Simulator` and `Unknown Physical System`, connect it
+to `Research Agent` with red `actions` and gray `observations` arrows, and include
+`Task: identify the underlying physical structure`.
 
-- [ ] **Step 2: Render and inspect the asset**
+- [ ] **Step 2: Draw the right trajectory region**
 
-Open the SVG directly or render it to PNG and verify that all three paths remain
-distinct at thumbnail size, arrowheads point toward the target, and the teal
-lattice is the strongest endpoint.
+Title it `+ Diverse Research Trajectories`. Branch `Initial Research State` into
+three dashed state nodes labeled `SIMULATE`, `OBSERVE`, and `REFINE`, then converge
+them on `SHARED GROUND TRUTH`, split into `Physical Structure` and
+`Equivalent Observables`. End with `Different trajectories. One stable target.`.
 
-### Task 2: Integrate the visual into the third project
+- [ ] **Step 3: Apply the reference visual system**
+
+Use Arial/Helvetica, black heavy titles, pale-yellow state headers, gray state
+bodies, red primary arrows, gray secondary arrows, dashed boundaries, straight
+segments, and enough scale to fill the `1600 × 900` viewBox.
+
+### Task 2: Verify and publish
 
 **Files:**
-- Modify: `index.html`
-- Verify: `tests/site.test.mjs`
+- Verify: `assets/img/open-ended-benchmark.svg`
+- Verify: `index.html`
 
-- [ ] **Step 1: Add the existing project-preview structure**
+- [ ] **Step 1: Validate the SVG**
 
-Replace the text-only article class with `research-entry` and insert:
+Run `xmllint --noout assets/img/open-ended-benchmark.svg`; expect no output and
+exit status `0`.
 
-```html
-<div class="research-preview">
-  <img
-    src="assets/img/open-ended-benchmark.svg"
-    alt="Multiple research trajectories converging on one shared physical ground truth"
-  >
-</div>
-```
+- [ ] **Step 2: Inspect both render sizes**
 
-- [ ] **Step 2: Update the project metadata**
+Render the SVG directly, then capture the third homepage project card at desktop
+width. Confirm the full figure has no empty regions and the thumbnail retains its
+headings, trajectory structure, and shared-GT endpoint.
 
-Use this exact copy:
-
-```html
-<p class="research-meta">
-  Independent research · Academic discussion: Prof. Siheng Chen, School of
-  Artificial Intelligence, Shanghai Jiao Tong University · Pilot completed
-</p>
-```
-
-- [ ] **Step 3: Perform focused verification**
-
-Run `git diff --check`, confirm the new asset is referenced exactly once, and
-visually inspect the third project card. Do not run the broad test suite for this
-content-only update.
-
-- [ ] **Step 4: Commit and publish**
+- [ ] **Step 3: Commit and publish**
 
 ```bash
-git add assets/img/open-ended-benchmark.svg index.html
-git commit -m "Add open-ended benchmark project visual"
+git add assets/img/open-ended-benchmark.svg
+git commit -m "Refine open-ended benchmark method figure"
 git push origin main
 ```
