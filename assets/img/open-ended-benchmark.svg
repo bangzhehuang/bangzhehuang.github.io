@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Multiple research trajectories converging on shared physical ground truth</title>
+  <desc id="desc">Three distinct simulation and observation paths converge on one lattice-like physical structure.</desc>
+
+  <defs>
+    <marker id="arrow-blue" markerWidth="22" markerHeight="22" refX="18" refY="11" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M 0 1 L 20 11 L 0 21 Z" fill="#2855D9"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="22" markerHeight="22" refX="18" refY="11" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M 0 1 L 20 11 L 0 21 Z" fill="#E34A3B"/>
+    </marker>
+    <marker id="arrow-gold" markerWidth="22" markerHeight="22" refX="18" refY="11" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M 0 1 L 20 11 L 0 21 Z" fill="#E7A823"/>
+    </marker>
+    <marker id="arrow-ink" markerWidth="24" markerHeight="24" refX="20" refY="12" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M 0 1 L 22 12 L 0 23 Z" fill="#171A1F"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="#FFFFFF"/>
+
+  <!-- Starting research state -->
+  <circle cx="160" cy="450" r="78" fill="#171A1F"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 128 471 L 160 420 L 194 472"/>
+    <path d="M 128 471 L 194 472"/>
+  </g>
+  <g fill="#FFFFFF">
+    <circle cx="128" cy="471" r="11"/>
+    <circle cx="160" cy="420" r="11"/>
+    <circle cx="194" cy="472" r="11"/>
+  </g>
+
+  <!-- Three valid research trajectories -->
+  <g fill="none" stroke-width="11" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M 215 395 L 320 395 L 402 198 L 500 198" stroke="#2855D9"/>
+    <path d="M 608 198 L 720 198 L 786 274" stroke="#2855D9"/>
+    <path d="M 890 274 L 1010 274 L 1158 426" stroke="#2855D9" marker-end="url(#arrow-blue)"/>
+
+    <path d="M 238 450 L 466 450" stroke="#E34A3B"/>
+    <path d="M 574 450 L 756 450" stroke="#E34A3B"/>
+    <path d="M 864 450 L 1150 450" stroke="#E34A3B" marker-end="url(#arrow-red)"/>
+
+    <path d="M 215 505 L 320 505 L 402 702 L 500 702" stroke="#E7A823"/>
+    <path d="M 608 702 L 720 702 L 786 626" stroke="#E7A823"/>
+    <path d="M 890 626 L 1010 626 L 1158 474" stroke="#E7A823" marker-end="url(#arrow-gold)"/>
+  </g>
+
+  <!-- Simulation nodes -->
+  <g>
+    <rect x="496" y="144" width="112" height="108" rx="18" fill="#EEF2FF" stroke="#2855D9" stroke-width="8"/>
+    <rect x="496" y="396" width="112" height="108" rx="18" fill="#FFF0ED" stroke="#E34A3B" stroke-width="8"/>
+    <rect x="496" y="648" width="112" height="108" rx="18" fill="#FFF7DC" stroke="#E7A823" stroke-width="8"/>
+
+    <g fill="none" stroke-width="5">
+      <g stroke="#2855D9">
+        <path d="M 526 172 H 578 M 526 198 H 578 M 526 224 H 578 M 526 172 V 224 M 552 172 V 224 M 578 172 V 224" opacity="0.48"/>
+      </g>
+      <g stroke="#E34A3B">
+        <path d="M 526 424 H 578 M 526 450 H 578 M 526 476 H 578 M 526 424 V 476 M 552 424 V 476 M 578 424 V 476" opacity="0.48"/>
+      </g>
+      <g stroke="#E7A823">
+        <path d="M 526 676 H 578 M 526 702 H 578 M 526 728 H 578 M 526 676 V 728 M 552 676 V 728 M 578 676 V 728" opacity="0.56"/>
+      </g>
+    </g>
+
+    <g>
+      <g fill="#2855D9">
+        <circle cx="526" cy="172" r="7"/><circle cx="552" cy="172" r="7"/><circle cx="578" cy="172" r="7"/>
+        <circle cx="526" cy="198" r="7"/><circle cx="552" cy="198" r="7"/><circle cx="578" cy="198" r="7"/>
+        <circle cx="526" cy="224" r="7"/><circle cx="552" cy="224" r="7"/><circle cx="578" cy="224" r="7"/>
+      </g>
+      <g fill="#E34A3B">
+        <circle cx="526" cy="424" r="7"/><circle cx="552" cy="424" r="7"/><circle cx="578" cy="424" r="7"/>
+        <circle cx="526" cy="450" r="7"/><circle cx="552" cy="450" r="7"/><circle cx="578" cy="450" r="7"/>
+        <circle cx="526" cy="476" r="7"/><circle cx="552" cy="476" r="7"/><circle cx="578" cy="476" r="7"/>
+      </g>
+      <g fill="#E7A823">
+        <circle cx="526" cy="676" r="7"/><circle cx="552" cy="676" r="7"/><circle cx="578" cy="676" r="7"/>
+        <circle cx="526" cy="702" r="7"/><circle cx="552" cy="702" r="7"/><circle cx="578" cy="702" r="7"/>
+        <circle cx="526" cy="728" r="7"/><circle cx="552" cy="728" r="7"/><circle cx="578" cy="728" r="7"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Observation and feedback nodes -->
+  <g>
+    <circle cx="838" cy="274" r="56" fill="#EEF2FF" stroke="#2855D9" stroke-width="8"/>
+    <circle cx="810" cy="450" r="56" fill="#FFF0ED" stroke="#E34A3B" stroke-width="8"/>
+    <circle cx="838" cy="626" r="56" fill="#FFF7DC" stroke="#E7A823" stroke-width="8"/>
+
+    <polyline points="802,280 816,260 831,286 846,248 874,274" fill="none" stroke="#2855D9" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/>
+    <polyline points="774,456 788,436 803,462 818,424 846,450" fill="none" stroke="#E34A3B" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/>
+    <polyline points="802,632 816,612 831,638 846,600 874,626" fill="none" stroke="#E7A823" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </g>
+
+  <!-- Convergence and shared physical ground truth -->
+  <path d="M 1135 450 L 1180 405 L 1225 450 L 1180 495 Z" fill="#171A1F"/>
+  <path d="M 1228 450 H 1282" fill="none" stroke="#171A1F" stroke-width="13" marker-end="url(#arrow-ink)"/>
+
+  <circle cx="1420" cy="450" r="132" fill="#E9F8F5" stroke="#171A1F" stroke-width="11"/>
+  <g fill="none" stroke="#078C7C" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 1360 390 L 1420 355 L 1480 390 L 1480 510 L 1420 545 L 1360 510 Z"/>
+    <path d="M 1360 390 L 1420 450 L 1480 390 M 1360 510 L 1420 450 L 1480 510 M 1420 355 V 450 V 545"/>
+  </g>
+  <g stroke="#078C7C" stroke-width="7">
+    <circle cx="1420" cy="355" r="15" fill="#FFFFFF"/>
+    <circle cx="1360" cy="390" r="15" fill="#FFFFFF"/>
+    <circle cx="1480" cy="390" r="15" fill="#FFFFFF"/>
+    <circle cx="1360" cy="510" r="15" fill="#FFFFFF"/>
+    <circle cx="1480" cy="510" r="15" fill="#FFFFFF"/>
+    <circle cx="1420" cy="545" r="15" fill="#FFFFFF"/>
+    <circle cx="1420" cy="450" r="22" fill="#078C7C"/>
+  </g>
+</svg>
