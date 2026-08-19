@@ -1,11 +1,14 @@
 \documentclass[10pt,a4paper]{article}
 
-\usepackage[margin=1.55cm]{geometry}
+\usepackage[margin=1.45cm]{geometry}
 \usepackage{fontspec}
+\usepackage{amsmath,amssymb}
 \usepackage{xcolor}
 \usepackage{hyperref}
 
-\setmainfont{Times New Roman}
+\IfFontExistsTF{Times New Roman}
+  {\setmainfont{Times New Roman}}
+  {\setmainfont{TeX Gyre Termes}}
 
 \definecolor{linkblue}{RGB}{20,75,140}
 \hypersetup{
@@ -15,26 +18,26 @@
 }
 
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{2pt}
-\linespread{1.02}
+\setlength{\parskip}{1.5pt}
+\linespread{1.0}
 \setlength{\leftmargini}{1.4em}
 \let\originalitemize\itemize
 \let\endoriginalitemize\enditemize
 \renewenvironment{itemize}
   {\originalitemize
-   \setlength{\itemsep}{1.8pt}
-   \setlength{\topsep}{2.5pt}
+   \setlength{\itemsep}{1.4pt}
+   \setlength{\topsep}{2.2pt}
    \setlength{\parsep}{0pt}
    \setlength{\partopsep}{0pt}}
   {\endoriginalitemize}
 
 \newcommand{\cvname}[1]{{\LARGE\bfseries #1}\par}
 \newcommand{\cvsection}[1]{
-  \vspace{0.55em}{\large\bfseries #1}\par
-  \vspace{0.1em}\hrule\vspace{0.35em}
+  \vspace{0.48em}{\large\bfseries #1}\par
+  \vspace{0.08em}\hrule\vspace{0.3em}
 }
 \newcommand{\entry}[4]{
-  \textbf{#1}\hfill #2\\
+  \textbf{#1}\hfill #2\\[-0.05em]
   \textit{#3}\hfill\textit{#4}
 }
 \newcommand{\project}[2]{
@@ -47,14 +50,17 @@
 \begin{document}
 
 \cvname{Bangzhe Huang}
-\vspace{0.12em}
+\vspace{0.1em}
 \href{mailto:huangbzphys@gmail.com}{huangbzphys@gmail.com}
 \quad|\quad
 \href{https://github.com/bangzhehuang}{github.com/bangzhehuang}
 \quad|\quad
 \href{https://bangzhehuang.github.io/}{bangzhehuang.github.io}
 
-\vspace{0.4em}
+\vspace{0.3em}
+\textbf{Current position:} Research Intern in Prof. Ziming Liu's group,
+College of AI, Tsinghua University
+
 \textbf{Research interests:} automated research, research world models,
 AI4AI, scientific machine learning, and many-body physics
 
@@ -63,79 +69,77 @@ AI4AI, scientific machine learning, and many-body physics
 \entry
   {Fudan University, Department of Physics}
   {Shanghai, China}
-  {B.Sc. in Physics, incoming undergraduate}
+  {Incoming undergraduate, Strong Foundation Program in Physics}
   {September 2026 -- expected June 2030}
 
 \cvsection{Research Experience}
 
-\entry
-  {College of AI, Tsinghua University}
-  {Beijing, China}
-  {Research Intern, Prof. Ziming Liu's group}
-  {Current}
-
-\vspace{0.15em}
 \project
-  {AI4AI: Learning to Design a Meta-model}
-  {Independent research; active pilot}
+  {AI4AI: Learning to Design a Model}
+  {Lead researcher; advisor: Prof. Ziming Liu, College of AI, Tsinghua University; active pilot}
 
 \begin{itemize}
-  \item Built a controlled AI4AI pilot in which one meta-model predicts
-  training dynamics and a second model learns architecture-dependent test
-  log-MAE to guide the design of the first model.
-  \item Defined an exhaustive DAG search space from four homogeneous MLP blocks
-  and one softmax gate, generated 10,006 canonical candidates, and built a graph
-  encoder for supervised architecture-to-outcome prediction.
-  \item Implemented the candidate-training and meta-model pipelines and an
-  interactive interface for manual DAG construction, outcome prediction, and
-  automatic architecture design. Preliminary experiments surface a
-  ResNet-like design.
+  \item Built a controlled AI4AI pilot in which a graph meta-model learns the
+  mapping from neural architectures to downstream test log-MAE under fixed
+  regression tasks, data splits, optimizers, and training budgets.
+  \item Defined a DAG architecture DSL from four homogeneous MLP blocks and one
+  softmax gate, exhaustively enumerated 10,006 canonical candidates, and encoded
+  component and edge structure with a graph neural network.
+  \item Developed an interactive demo for manual DAG construction, DSL
+  validation, outcome prediction, automatic architecture design, and training
+  dynamics. Preliminary experiments identified a high-performing ResNet-like
+  design.
 \end{itemize}
 
 \project
-  {Physics-Informed Many-Body Foundation Models: Scalable Optimization across
-  Heterogeneous Tasks}
-  {Project lead; advisor: Prof. Jing Wang, Fudan University; preprint in preparation}
+  {Scaling Foundation Models for Many-Body Physics}
+  {Project lead; advisor: Prof. Jing Wang, Department of Physics, Fudan University; preprint in preparation}
 
 \begin{itemize}
-  \item Proposed a task-modular many-body foundation model that preserves each
-  Hamiltonian family's physical priors and ansatzes while learning
-  high-level representations for cross-task composition.
-  \item Led problem formulation, PyTorch implementation, and experimental
-  evaluation against unified joint-training baselines across task scales,
-  task combinations, and fine-tuning settings.
+  \item Identified severe optimization ill-conditioning as a key barrier to
+  scaling a monolithic model across heterogeneous Hamiltonian families, and
+  proposed a task-modular architecture that preserves family-specific physical
+  priors and ansatzes while enabling cross-task knowledge composition.
+  \item Led problem formulation, method design, PyTorch implementation, and
+  evaluation against unified joint-training baselines across task scales, task
+  combinations, and fine-tuning settings.
   \item Preliminary results show comparable generalization and adaptation when
-  unified training is optimizable, while the modular system remains trainable
-  in regimes where the unified baseline becomes ill-conditioned.
+  unified training remains tractable, while the modular system remains
+  trainable in regimes where the unified baseline becomes ill-conditioned.
 \end{itemize}
 
 \project
   {Open-Ended Scientific Research Benchmark for Physics Research Agents}
-  {Independent research; academic discussion with Prof. Siheng Chen, Shanghai Jiao Tong University}
+  {Independent research; academic discussion: Prof. Siheng Chen, School of Artificial Intelligence, Shanghai Jiao Tong University; pilot completed}
 
 \begin{itemize}
   \item Designed open-ended physics research tasks with stable ground truth
-  defined by low-dimensional physical structure and equivalent observables,
+  defined by low-dimensional physical structures and equivalent observables,
   without prescribing a single valid research trajectory.
-  \item Built an end-to-end pilot covering task interpretation, simulation
-  design, code generation and execution, feedback-driven action selection, and
-  final physical auditing.
+  \item Built an end-to-end pilot spanning experiment and simulation design,
+  code generation and execution, multi-round observation and feedback, and a
+  final physical audit.
 \end{itemize}
 
 \project
   {Phase Transport and Defect Dynamics in Nonreciprocal Spin Systems}
-  {Lead researcher; advisor: Prof. Zi Cai, Shanghai Jiao Tong University}
+  {Lead researcher; advisor: Prof. Zi Cai, School of Physics and Astronomy, Shanghai Jiao Tong University; pilot completed}
 
 \begin{itemize}
   \item Used Monte Carlo simulations to study the microscopic origin of
   macroscopic oscillations in two-dimensional nonreciprocal spin systems and
   extracted oscillation frequency, domain-wall density, and defect observables.
-  \item Proposed the effective transport relation
-  $\omega=\rho v_{\mathrm{eff}}$ and identified two dynamical regimes associated
-  with periodic wall expansion and vortex-constrained topological structures.
-  \item Tested the resulting physical picture across lattice structures and
-  symmetric bond disorder.
+  \item Connected oscillation frequency $\omega$, domain-wall density $\rho$,
+  and effective transport velocity through $\omega=\rho v_{\mathrm{eff}}$, and
+  extracted $v_{\mathrm{eff}}$ from the linear $\omega$--$\rho$ regime.
+  \item Identified regimes dominated by vortex-pair generation and periodic
+  wall expansion versus vortex-constrained topological structures, and tested
+  the physical picture across lattice geometries and symmetric bond disorder.
 \end{itemize}
+
+\cvsection{Honors}
+
+Gold Medal, 42nd Chinese Physics Olympiad, 2025
 
 \cvsection{Technical Skills}
 
