@@ -32,7 +32,7 @@ test("homepage contains the four research entries in the approved order", () => 
   const html = readHomepage();
   const titles = [
     "AI4AI: Learning to Design a Model",
-    "Physics-Informed Many-Body Foundation Models",
+    "Scaling Foundation Models for Many-Body Physics",
     "Open-Ended Scientific Research Benchmark for Physics Research Agents",
     "Phase Transport and Defect Dynamics in Nonreciprocal Spin Systems",
   ];
