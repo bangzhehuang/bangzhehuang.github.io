@@ -31,7 +31,7 @@ test("homepage keeps the name primary and removes portrait treatment", () => {
 test("homepage contains the four research entries in the approved order", () => {
   const html = readHomepage();
   const titles = [
-    "AI4AI: Learning to Design a Meta-model",
+    "AI4AI: Learning to Design a Model",
     "Physics-Informed Many-Body Foundation Models",
     "Open-Ended Scientific Research Benchmark for Physics Research Agents",
     "Phase Transport and Defect Dynamics in Nonreciprocal Spin Systems",
