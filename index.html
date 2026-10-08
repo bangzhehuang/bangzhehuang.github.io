@@ -6,14 +6,14 @@
     <title>Bangzhe Huang</title>
     <meta
       name="description"
-      content="Bangzhe Huang works on research world models, automated research, AI4AI, and machine learning for science."
+      content="Bangzhe Huang builds scientific foundation models and AI4AI systems, with research in neural architecture search and physical world models."
     >
     <link rel="canonical" href="https://bangzhehuang.github.io/">
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Bangzhe Huang">
     <meta
       property="og:description"
-      content="Research world models, automated research, AI4AI, and machine learning for science."
+      content="Scientific foundation models, neural architecture search, physical world models, and AI4AI."
     >
     <meta property="og:url" content="https://bangzhehuang.github.io/">
     <meta
@@ -63,18 +63,19 @@
         <div class="about-copy">
           <p>
             I am Bangzhe Huang (黄邦哲), a research intern in Prof. Ziming Liu's
-            group at the College of AI, Tsinghua University, and an incoming
-            undergraduate in physics at Fudan University. I have also conducted
+            group at the College of AI, Tsinghua University, and an
+            undergraduate in the Strong Foundation Program in Physics at Fudan
+            University. I have also conducted
             research with Prof. Jing Wang at Fudan University and Prof. Zi Cai at
             Shanghai Jiao Tong University.
           </p>
           <p>
-            My research has evolved from many-body physics and scientific foundation
-            models toward autoresearch and controlled AI4AI systems. Recently, I
-            have been particularly interested in building research world models
-            that learn how a current research state and an action lead to the next
-            research state. I am open to collaborations on autoresearch, research
-            world models, AI4AI, and machine learning for science.
+            I build scientific foundation models and systems that automate model
+            design. My work spans condensed-matter foundation models and neural
+            architecture search, combining physical insight with scalable training
+            infrastructure. Recently, I have been exploring physical world models
+            and embodied intelligence, with a focus on learning representations
+            for prediction and interaction in physical environments.
           </p>
         </div>
 
@@ -105,17 +106,18 @@
               <div class="research-body">
                 <h3>AI4AI: Learning to Design a Model</h3>
                 <p>
-                  Can a learned model predict which architecture will train well,
-                  then use those predictions to design another model? I built a
-                  controlled pilot over a DSL of four MLP blocks and one softmax
-                  gate. Candidate DAGs are trained on fixed regression tasks, while
-                  a graph meta-model predicts test log-MAE and supports manual or
-                  automatic architecture design. Preliminary experiments surface a
-                  ResNet-like design.
+                  <strong>33 SOTA-level results across 9 OpenTS datasets.</strong>
+                  I designed a neural architecture search space rich in
+                  high-performing models, enabling straightforward random search
+                  and performance-guided mutation to discover strong architectures.
+                  The resulting models matched or exceeded published SOTA scores
+                  on 33 forecasting tasks, with up to 31.56% lower MSE. I also built
+                  the multi-GPU search and evaluation infrastructure that turns
+                  architecture design into a scalable experimental process.
                 </p>
                 <p class="research-meta">
                   Lead researcher · Advisor: Prof. Ziming Liu, College of AI,
-                  Tsinghua University · Active pilot
+                  Tsinghua University · Ongoing research
                 </p>
                 <p class="research-links">
                   <a href="https://bangzhehuang.github.io/AI4AI-demo/">Demo</a>
@@ -137,14 +139,14 @@
               <div class="research-body">
                 <h3>Scaling Foundation Models for Many-Body Physics</h3>
                 <p>
-                  Scientific foundation models have been studied for years, yet
-                  foundation models for many-body physics remain scarce. We
-                  systematically identify a key reason: scaling a single monolithic
-                  model across heterogeneous Hamiltonian families can make training
-                  severely ill-conditioned. To address this, we propose a
-                  task-modular architecture that preserves the physical priors and
-                  ansatzes of each Hamiltonian family while enabling cross-task
-                  knowledge composition through high-level representation learning.
+                  I built and trained a Hamiltonian-conditioned foundation model
+                  for condensed-matter physics, spanning transverse-field Ising,
+                  Heisenberg, XXZ/XYZ, and Dzyaloshinskii–Moriya interactions. The
+                  project combines mixture-of-architectures research with quantum
+                  wavefunction learning across thousands of Hamiltonians. I led
+                  the full training stack, including physical-system representation,
+                  multi-GPU JAX training, mixed precision, checkpoint recovery,
+                  live monitoring, and physics-based evaluation.
                 </p>
                 <p class="research-meta">
                   Project lead · Advisor: Prof. Jing Wang, Department of Physics,
@@ -228,9 +230,9 @@
           <article class="experience-entry">
             <div>
               <h3>Department of Physics, Fudan University</h3>
-              <p>Incoming undergraduate in Physics</p>
+              <p>Undergraduate, Strong Foundation Program in Physics</p>
             </div>
-            <p class="experience-time">Starting September 2026</p>
+            <p class="experience-time">September 2026 – Present</p>
           </article>
         </div>
       </section>

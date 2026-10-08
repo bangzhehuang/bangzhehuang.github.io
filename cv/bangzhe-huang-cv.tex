@@ -1,14 +1,11 @@
 \documentclass[10pt,a4paper]{article}
 
 \usepackage[margin=1.45cm]{geometry}
-\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
 \usepackage{amsmath,amssymb}
 \usepackage{xcolor}
 \usepackage{hyperref}
-
-\IfFontExistsTF{Times New Roman}
-  {\setmainfont{Times New Roman}}
-  {\setmainfont{TeX Gyre Termes}}
 
 \definecolor{linkblue}{RGB}{20,75,140}
 \hypersetup{
@@ -61,34 +58,33 @@
 \textbf{Current position:} Research Intern in Prof. Ziming Liu's group,
 College of AI, Tsinghua University
 
-\textbf{Research interests:} automated research, research world models,
-AI4AI, scientific machine learning, and many-body physics
+\textbf{Research interests:} physical world models, scientific foundation
+models, neural architecture search, AI4AI, and automated research
 
 \cvsection{Education}
 
 \entry
   {Fudan University, Department of Physics}
   {Shanghai, China}
-  {Incoming undergraduate, Strong Foundation Program in Physics}
+  {Undergraduate, Strong Foundation Program in Physics}
   {September 2026 -- expected June 2030}
 
 \cvsection{Research Experience}
 
 \project
   {AI4AI: Learning to Design a Model}
-  {Lead researcher; advisor: Prof. Ziming Liu, College of AI, Tsinghua University; active pilot}
+  {Lead researcher; advisor: Prof. Ziming Liu, College of AI, Tsinghua University; ongoing research}
 
 \begin{itemize}
-  \item Built a controlled AI4AI pilot in which a graph meta-model learns the
-  mapping from neural architectures to downstream test log-MAE under fixed
-  regression tasks, data splits, optimizers, and training budgets.
-  \item Defined a DAG architecture DSL from four homogeneous MLP blocks and one
-  softmax gate, exhaustively enumerated 10,006 canonical candidates, and encoded
-  component and edge structure with a graph neural network.
-  \item Developed an interactive demo for manual DAG construction, DSL
-  validation, outcome prediction, automatic architecture design, and training
-  dynamics. Preliminary experiments identified a high-performing ResNet-like
-  design.
+  \item Matched or exceeded published \textbf{SOTA scores on 33 forecasting
+  tasks across 9 OpenTS datasets}, with up to \textbf{31.56\% lower MSE}
+  than the published best score.
+  \item Designed a neural architecture search space rich in high-performing
+  models, enabling straightforward random search and performance-guided
+  mutation to discover strong architectures.
+  \item Built a scalable search and evaluation pipeline across \textbf{32 A100
+  GPUs}, integrating architecture generation, automated training, feedback-guided
+  search, and experiment tracking.
 \end{itemize}
 
 \project
@@ -96,16 +92,15 @@ AI4AI, scientific machine learning, and many-body physics
   {Project lead; advisor: Prof. Jing Wang, Department of Physics, Fudan University; preprint in preparation}
 
 \begin{itemize}
-  \item Identified severe optimization ill-conditioning as a key barrier to
-  scaling a monolithic model across heterogeneous Hamiltonian families, and
-  proposed a task-modular architecture that preserves family-specific physical
-  priors and ansatzes while enabling cross-task knowledge composition.
-  \item Led problem formulation, method design, PyTorch implementation, and
-  evaluation against unified joint-training baselines across task scales, task
-  combinations, and fine-tuning settings.
-  \item Preliminary results show comparable generalization and adaptation when
-  unified training remains tractable, while the modular system remains
-  trainable in regimes where the unified baseline becomes ill-conditioned.
+  \item Built and trained a \textbf{Hamiltonian-conditioned foundation model}
+  for condensed-matter physics spanning transverse-field Ising, Heisenberg,
+  XXZ/XYZ, and Dzyaloshinskii--Moriya interactions.
+  \item Led the end-to-end foundation-model engineering stack: physical-system
+  representation, multi-task data generation, multi-GPU JAX training,
+  mixed precision, resumable checkpoints, and real-time experiment monitoring.
+  \item Integrated mixture-of-architectures feature fusion with neural
+  quantum-state learning and physics-based evaluation to model ground-state
+  wavefunctions across thousands of Hamiltonians.
 \end{itemize}
 
 \project
@@ -143,8 +138,8 @@ Gold Medal, 42nd Chinese Physics Olympiad, 2025
 
 \cvsection{Technical Skills}
 
-\textbf{Machine learning:} PyTorch, deep learning, scientific foundation
-models, graph neural networks, LLM agents, benchmark design\\
+\textbf{Machine learning:} JAX, PyTorch, foundation-model training, neural
+architecture search, multi-GPU training, LLM agents\\
 \textbf{Scientific computing:} Python, Monte Carlo simulation, numerical
 experiments, statistical analysis\\
 \textbf{Physics:} quantum mechanics, statistical physics, many-body physics
